@@ -10,7 +10,7 @@ class DongleTouchApp(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Dongle Touch Controller")
-        self.resize(1280, 900)  # Height no longer needs to accommodate button specifically
+        self.resize(1280, 900)  
 
         self.start_pos = None
         self.screenshot_path = "screen.png"
@@ -33,7 +33,6 @@ class DongleTouchApp(QWidget):
 
         # Layout & Widgets
         self.layout = QVBoxLayout(self)
-        # Removed Enter button, so nothing added here
 
         self.update_screenshot()
 
@@ -90,7 +89,6 @@ class DongleTouchApp(QWidget):
             img = img.rotate(self.rotation_angle, expand=True)
 
         widget_width = self.width()
-        # Removed button height subtraction since no button
         widget_height = self.height()
         widget_aspect = widget_width / widget_height
 
