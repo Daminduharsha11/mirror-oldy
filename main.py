@@ -1,7 +1,7 @@
 import sys
 import subprocess
 import os
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout
 from PyQt5.QtGui import QPixmap, QImage, QPainter, QColor
 from PyQt5.QtCore import Qt, QRect, QTimer
 from PIL import Image
@@ -10,7 +10,7 @@ class DongleTouchApp(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Dongle Touch Controller")
-        self.resize(1280, 900)  # Slightly taller to fit the button
+        self.resize(1280, 900)  # Height no longer needs to accommodate button specifically
 
         self.start_pos = None
         self.screenshot_path = "screen.png"
@@ -33,13 +33,7 @@ class DongleTouchApp(QWidget):
 
         # Layout & Widgets
         self.layout = QVBoxLayout(self)
-
-        # Button for Enter key
-        self.enter_button = QPushButton("Enter", self)
-        self.enter_button.clicked.connect(self.send_enter_key)
-
-        self.layout.addStretch()  # Push the button down below the image
-        self.layout.addWidget(self.enter_button)
+        # Removed Enter button, so nothing added here
 
         self.update_screenshot()
 
@@ -96,7 +90,8 @@ class DongleTouchApp(QWidget):
             img = img.rotate(self.rotation_angle, expand=True)
 
         widget_width = self.width()
-        widget_height = self.height() - self.enter_button.height() - 20  # Leave space for button
+        # Removed button height subtraction since no button
+        widget_height = self.height()
         widget_aspect = widget_width / widget_height
 
         # Adjust device width/height based on rotation
