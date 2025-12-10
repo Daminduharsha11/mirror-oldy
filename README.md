@@ -38,14 +38,14 @@ Mirror your device screen, send taps, swipes, scrolls, and rotate the view — a
 
 2. (Optional but recommended) Create and activate a Python virtual environment:
 
-   '''bash
+   ```bash
    python -m venv venv
    source venv/bin/activate   # Linux/macOS
    venv\Scripts\activate      # Windows
 
 4. Install required packages
 
-   '''bash
+   ```bash
    pip install -r requirements.txt
 
 6. Ensure ADB
@@ -55,8 +55,5 @@ Mirror your device screen, send taps, swipes, scrolls, and rotate the view — a
 
 Run the application:
 
-   '''bash
+   ```bash
    python main.py
-
-
-Interact with your device through the mirrored window. Use mouse for taps and swipes. Use keyboard shortcuts to refresh, stream, or rotate.
