@@ -1,11 +1,15 @@
 # Mirror-Oldy
 
-#Android Version Compatibility Notice
-Mirror-Oldy is primarily designed and tested for older Android versions (roughly Android 5.0 Lollipop up to Android 9 Pie). It leverages basic ADB shell commands for screen capture and input events which may have limited or no support on newer Android releases or certain device OEM customizations.
+Mirror-Oldy is primarily designed and tested for older Android versions (roughly Android 5.0 Lollipop up to Android 9 Pie). 
+
+It leverages basic ADB shell commands for screen capture and input events which may have limited or no support on newer Android releases or certain device OEM customizations.
+
 Works best on devices where adb shell screencap and adb shell input commands function reliably.
+
 May not work correctly on the latest Android versions (Android 10+), due to security enhancements and changed APIs.
 
 A PyQt5-based desktop application for real-time control and interaction with Android devices via ADB.  
+
 Mirror your device screen, send taps, swipes, scrolls, and rotate the view — all from your PC.
 
 ---
@@ -34,22 +38,25 @@ Mirror your device screen, send taps, swipes, scrolls, and rotate the view — a
 
 2. (Optional but recommended) Create and activate a Python virtual environment:
 
-   '''python -m venv venv
+   '''bash
+   python -m venv venv
    source venv/bin/activate   # Linux/macOS
    venv\Scripts\activate      # Windows
 
-3. Install required packages
+4. Install required packages
 
-   '''pip install -r requirements.txt
+   '''bash
+   pip install -r requirements.txt
 
-4. Ensure ADB
+6. Ensure ADB
  is installed and your Android device is connected with USB debugging enabled.
 
 ##Usage
 
 Run the application:
 
-   '''python main.py
+   '''bash
+   python main.py
 
 
 Interact with your device through the mirrored window. Use mouse for taps and swipes. Use keyboard shortcuts to refresh, stream, or rotate.
