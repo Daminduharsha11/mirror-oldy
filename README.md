@@ -51,7 +51,7 @@ Mirror your device screen, send taps, swipes, scrolls, and rotate the view — a
 6. Ensure ADB
  is installed and your Android device is connected with USB debugging enabled.
 
-##Usage
+## Usage
 
 Run the application:
 
